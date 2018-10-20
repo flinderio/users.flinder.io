@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc -p .",
-    "build:live": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
-    "start": "NODE_ENV=development npm run build:live",
+    "debug": "nodemon --inspect --watch 'src/**/*.ts' --require 'ts-node/register' src/index.ts",
+    "start": "NODE_ENV=development npm run debug",
     "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
